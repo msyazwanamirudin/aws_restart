@@ -1,16 +1,11 @@
-userReply = input("Do you need to ship a package? (Enter yes or no)")
+userReply = input("Do you want to ship a package? (Enter 'yes' or 'no')")
 if userReply == "yes":
-    print("We can help you ship that package!")
+    print("Great! Let me have your details.")
+    name = (input("\nName please:"))
+    weight = (input("\nCan we have the estimated weight of the package?"))
+    location = (input("\nPlease enter the destination location:"))
+    number = (input("\n Can we have your contact number?"))
+    dictionary = {"Name": name , "Weight": weight , "Location" : location , "Contact Number": number}
+    print ("\nThank you for the information Mr/Ms. " + name + ". We will ship your package to " + location + " as soon as possible. We will infrom you about the delivery through your contact number " + number + ".")
 else:
-    print("Please come back when you need to ship a package. Thank you for visiting us!")
-
-userReply = input("Would you like to buy stamps, buy an envelope or make a copy? (Enter stamps, envelope or copy)")
-if userReply == "stamps":
-    print("We have many stamps desgins to choose from.")
-elif userReply == "envelope":
-    print ("We have many envelope sizes to choose from.")
-elif userReply == "copy":
-    copies = input("How many copies would you like? (Enter a number)")
-    print ("Here are {} copies of your document.""Thank you for visiting us! Please come back when you need to buy stamps, buy an envelope or make a copy.".format(copies))
-else:
-    print ("Thank you for visiting us! Please come back when you need to buy stamps, buy an envelope or make a copy.")
+    print("\nNo worries. Let us know if you change your mind.Thank you for visiting our website.")
