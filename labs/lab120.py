@@ -45,10 +45,14 @@ keyList = [
     ]
 
 for x in keyList:
-    print ({x: float(insulin.upper().count(x))})
+    print ({x: int(insulin.upper().count(x))})
 
 aaCountInsulin = ({})
+print (type(aaCountInsulin))
 
+
+molecularWeightInsulin = {x: aaCountInsulin[x] * aaWeights[x] for x in keyList}
+print(sum(molecularWeightInsulin.values()))
 # aaCountInsulin = ({x: float(insulin.upper().count(x)) 
 #                    for x in [
 #                        'A', 'C','D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S','T','V', 'W', 'Y'
